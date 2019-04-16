@@ -43,9 +43,24 @@ public class Telefone {
             }
         }
 
-        if (i == numero.length()){
+        if (i == numero.length()) {
             if (numero.length() == 11) {
-                if (numero.charAt(3) == '3') {
+                if (numero.charAt(3) == '9')
+                {
+                    return false;
+                }
+
+                else if (numero.charAt(0) == '0') {
+                    return true;
+                }
+
+                else {
+                    return false;
+                }
+            }
+
+            else if (numero.length() == 12) {
+                if (numero.charAt(3) == '9') {
                     if (numero.charAt(0) == '0') {
                         return true;
                     } else {
@@ -53,20 +68,6 @@ public class Telefone {
                     }
                 }
             }
-
-            else if (numero.length() == 12){
-                if (numero.charAt(3) == '9'){
-                    if (numero.charAt(0) == '0')
-                    {
-                        return true;
-                    }
-
-                    else{
-                        return false;
-                    }
-                }
-            }
-            return false;
         }
         return false;
     }
