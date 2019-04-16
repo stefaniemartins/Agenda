@@ -1,5 +1,7 @@
 package poo;
 
+import javax.swing.text.MaskFormatter;
+import java.text.ParseException;
 import java.util.HashMap;
 
 public class Telefone {
@@ -28,6 +30,11 @@ public class Telefone {
 //
 //    }
 
+    /**
+     * Método verifica se o número que o usuário deseja add é válido ou não.
+     * @param numero recebe o número a ser add a um determinado contado.
+     * @return true caso o número seja válido, return false caso o número não seja válido.
+     */
     public boolean verificador(String numero){
         int i;
         for (i = 0; i < numero.length(); i++) {
@@ -64,8 +71,36 @@ public class Telefone {
         return false;
     }
 
+    public String formata(String valor){
+        MaskFormatter mask = null;
+        String resultado = "";
+
+        try {
+            if (valor.length() == 11){
+                mask = new MaskFormatter("(###) ####-####");
+                mask.setValueContainsLiteralCharacters(false);
+                mask.setPlaceholderCharacter('_');
+                resultado = mask.valueToString(valor);
+            }
+
+            else {
+                mask = new MaskFormatter("(###) # ####-####");
+                mask.setValueContainsLiteralCharacters(false);
+                mask.setPlaceholderCharacter('_');
+                resultado = mask.valueToString(valor);
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return resultado;
+    }
+
     @Override
     public String toString() {
-        return "Telefone{}";
+        StringBuilder aux = new StringBuilder();
+        dadosTelefone.forEach((chave,valor)-> {
+            aux.append(chave + ": " + formata(valor) + "\n");
+        } );
+        return aux.toString();
     }
 }

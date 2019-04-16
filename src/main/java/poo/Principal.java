@@ -9,16 +9,16 @@ public class Principal {
         String nome;
         String numero;
 
-        System.out.println("Digite o nome e o número a serem adicionados:");
         nome = teclado.next();
         numero = teclado.next();
 
-        if(telefone.add(nome,numero)){
-            System.out.println("Dados corretos!");
-        }
+        telefone.add(nome,numero);
 
-        else{
-            System.out.println("Dados incorretos!");
-        }
+        nome = teclado.next();
+        numero = teclado.next();
+
+        telefone.add(nome,numero);
+
+        System.out.println(telefone.toString());
     }
 }
