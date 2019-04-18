@@ -24,5 +24,9 @@ public class Principal {
         telefone.remove("casa");
 
         System.out.println(telefone.toString());
+
+        telefone.update("celular", "048999419560");
+
+        System.out.println(telefone.toString());
     }
 }

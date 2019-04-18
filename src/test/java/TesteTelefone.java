@@ -21,8 +21,11 @@ public class TesteTelefone {
     assertEquals("Erro, add o telefone móvel sem ddd", false,telefone.add("celular","996948370"));
     assertEquals("Erro, add o telefone móvel com tamanho maior que o aceitável", false,telefone.add("celular","0489996948370"));
     assertEquals("Erro, add o telefone móvel com tamanho menor que o aceitável", false,telefone.add("celular","04896948370"));
-    // Testes do método remove;
+    // Testes do método remove.
     assertEquals("Erro ao remover número", true, telefone.remove("casa"));
     assertEquals("Erro, removeu número inválido", false, telefone.remove("carro"));
+    // Testes do método update.
+    assertEquals("Erro ao dar update no número", true, telefone.update("celular","048999419560"));
+    assertEquals("Erro, update em um rótulo inválido",false,telefone.update("carro","04833428683"));
     }
 }

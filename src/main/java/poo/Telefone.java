@@ -30,6 +30,28 @@ public class Telefone {
             }
 
             else {
+                 return false;
+            }
+        }
+
+        else{
+            return false;
+        }
+    }
+
+    public boolean update(String rotulo, String numero){
+        if (dadosTelefone.size() > 0){
+            if (dadosTelefone.containsKey(rotulo)){
+                if(add(rotulo,numero)){
+                    return true;
+                }
+
+                else {
+                    return false;
+                }
+            }
+
+            else {
                 return false;
             }
         }
@@ -38,10 +60,6 @@ public class Telefone {
             return false;
         }
     }
-//
-//    public boolean update(String rotulo, String nome){
-//
-//    }
 
     /**
      * Método verifica se o número que o usuário deseja add é válido ou não.
