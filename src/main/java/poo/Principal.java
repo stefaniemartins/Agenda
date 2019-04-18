@@ -20,5 +20,9 @@ public class Principal {
         telefone.add(nome,numero);
 
         System.out.println(telefone.toString());
+
+        telefone.remove("casa");
+
+        System.out.println(telefone.toString());
     }
 }

@@ -22,9 +22,22 @@ public class Telefone {
         }
     }
 
-//    public boolean remove(String rotulo){
-//
-//    }
+    public boolean remove(String rotulo){
+        if (dadosTelefone.size() > 0){
+            if (dadosTelefone.containsKey(rotulo)){
+                dadosTelefone.remove(rotulo);
+                return true;
+            }
+
+            else {
+                return false;
+            }
+        }
+
+        else{
+            return false;
+        }
+    }
 //
 //    public boolean update(String rotulo, String nome){
 //
