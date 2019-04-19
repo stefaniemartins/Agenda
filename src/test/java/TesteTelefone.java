@@ -8,7 +8,7 @@ public class TesteTelefone {
     Telefone telefone = new Telefone();
 
     @Test
-    public void testaTelefone(){
+    public void testeTelefone(){
     // Testes do método add.
     assertEquals("Erro, add número com caracteres inválidos",false,telefone.add("casa","0t83342g683"));
     assertEquals("Erro ao add o telefone fixo",true,telefone.add("casa","04833428683"));
