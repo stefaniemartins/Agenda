@@ -17,5 +17,9 @@ public class TesteEmail {
         // Testes do método remove.
         assertEquals("Erro ao remover e-mail", true, email.remove("pessoal"));
         assertEquals("Erro, removeu e-mail inválido", false, email.remove("carro"));
+        // Testes do método update.
+        email.add("empresarial","stefanie@ifsc.com");
+        assertEquals("Erro ao dar update no e-mail", true, email.update("empresarial","stefanie@outlook.com"));
+        assertEquals("Erro, update em um rótulo inválido",false,email.update("carro","stefanie@outlook.com"));
     }
 }

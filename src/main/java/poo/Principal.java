@@ -41,5 +41,9 @@ public class Principal {
         email.remove("pessoal");
 
         System.out.println(email.toString());
+
+        email.update("empresarial","stefanie@outlook.com");
+
+        System.out.println(email.toString());
     }
 }

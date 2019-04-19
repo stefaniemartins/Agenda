@@ -39,11 +39,23 @@ public class Email {
             return false;
         }
     }
-//
-//    public boolean update(String rotulo, String email){
-//
-//    }
-//
+
+    public boolean update(String rotulo, String email){
+        if (dadosEmail.containsKey(rotulo)){
+            if(add(rotulo,email)){
+                return true;
+            }
+
+            else {
+                return false;
+            }
+        }
+
+        else {
+            return false;
+        }
+    }
+
     public boolean verificador(String email){
         Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
         Matcher m = p.matcher(email);
