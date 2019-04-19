@@ -22,10 +22,23 @@ public class Email {
             return false;
         }
     }
-//
-//    public boolean remove(String rotulo){
-//
-//    }
+
+    public boolean remove(String rotulo){
+        if (dadosEmail.size() > 0){
+            if (dadosEmail.containsKey(rotulo)){
+                dadosEmail.remove(rotulo);
+                return true;
+            }
+
+            else {
+                return false;
+            }
+        }
+
+        else {
+            return false;
+        }
+    }
 //
 //    public boolean update(String rotulo, String email){
 //

@@ -31,6 +31,15 @@ public class Principal {
 //        System.out.println(telefone.toString());
 
         email.add(nome, texto);
+
+        nome = teclado.next();
+        texto = teclado.next();
+
+        email.add(nome, texto);
+        System.out.println(email.toString());
+
+        email.remove("pessoal");
+
         System.out.println(email.toString());
     }
 }

@@ -14,5 +14,8 @@ public class TesteEmail {
         assertEquals("Erro, add e-mail sem domínio",false,email.add("pessoal","stefanie@"));
         assertEquals("Erro, add e-mail com domínio incompleto",false,email.add("pessoal","stefanie@gmail"));
         assertEquals("Erro ao add e-mail",true,email.add("pessoal","stefanie@gmail.com"));
+        // Testes do método remove.
+        assertEquals("Erro ao remover e-mail", true, email.remove("pessoal"));
+        assertEquals("Erro, removeu e-mail inválido", false, email.remove("carro"));
     }
 }
